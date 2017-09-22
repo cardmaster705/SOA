@@ -22,7 +22,7 @@ import java.awt.event.ActionEvent;
 public class cliente_3 extends JFrame {
 	//variables importantes
 	Socket cliente;
-	int puerto =9000;
+	int puerto =8000;
 	String ip ="127.0.0.1";
 	BufferedReader entrada;
 	PrintStream salida;
@@ -191,8 +191,9 @@ public class cliente_3 extends JFrame {
 						salida.println(numero_uno);
 						salida.println(numero_dos);
 						String resultado_server= entrada.readLine();//recibe la informacion del server
-						System.out.println(resultado_server);
-						resultado.setText(resultado_server);
+						String limpio=resultado_server.substring(4);
+						System.out.println(limpio);
+						resultado.setText(limpio);
 					}catch(Exception e){}
 				}
 			});

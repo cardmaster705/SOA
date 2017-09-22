@@ -115,7 +115,7 @@ public void iniciar(){
 		//entrada = new BufferedReader (new InputStreamReader(socket.getInputStream()));//recibe el segundo parametro del cliente
 		String n2 = entrada.readLine();//almacena el texto en una variable
 		b=Integer.parseInt(n2);
-		System.out.println(elec+n1+n2);
+		//System.out.println(elec+n1+n2);
 		switch(eleccion){
 		case 1:
 			suma(a,b);
@@ -133,7 +133,7 @@ public void iniciar(){
 		String s= String.valueOf(c); 
 		salida= new DataOutputStream(socket.getOutputStream());
 		salida.writeUTF(s);
-		System.out.println(s);
+		//System.out.println(s);
 		//salida.writeUTF("Servidor Terminado");
 		socket.close();//termina la conexion
 		
