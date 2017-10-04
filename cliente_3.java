@@ -185,13 +185,109 @@ public class cliente_3 extends JFrame {
 					 String tipo_operacion=tipoOperacion.getText();
 					 String numero_uno=numeroUno.getText();
 					 String numero_dos=numeroDos.getText();
+					 if(numero_uno.equals("0")){
+						 numero_uno="A";
+					 }
+					 if(numero_uno.equals("1")){
+						 numero_uno="B";
+					 }
+					 if(numero_uno.equals("2")){
+						 numero_uno="C";
+					 }
+					 if(numero_uno.equals("3")){
+						 numero_uno="D";
+					 }
+					 if(numero_uno.equals("4")){
+						 numero_uno="E";
+					 }
+					 if(numero_uno.equals("5")){
+						 numero_uno="F";
+					 }
+					 if(numero_uno.equals("6")){
+						 numero_uno="G";
+					 }
+					 if(numero_uno.equals("7")){
+						 numero_uno="H";
+					 }
+					 if(numero_uno.equals("8")){
+						 numero_uno="I";
+					 }
+					 if(numero_uno.equals("9")){
+						 numero_uno="J";
+					 }//primer numero
+					 if(numero_dos.equals("0")){
+						 numero_dos="A";
+					 }
+					 if(numero_dos.equals("1")){
+						 numero_dos="B";
+					 }
+					 if(numero_dos.equals("2")){
+						 numero_dos="C";
+					 }
+					 if(numero_dos.equals("3")){
+						 numero_dos="D";
+					 }
+					 if(numero_dos.equals("4")){
+						 numero_dos="E";
+					 }
+					 if(numero_dos.equals("5")){
+						 numero_dos="F";
+					 }
+					 if(numero_dos.equals("6")){
+						 numero_dos="G";
+					 }
+					 if(numero_dos.equals("7")){
+						 numero_dos="H";
+					 }
+					 if(numero_dos.equals("8")){
+						 numero_dos="I";
+					 }
+					 if(numero_dos.equals("9")){
+						 numero_dos="J";
+					 }//segundo numero
+					 
 					try{
 						salida = new PrintStream(cliente.getOutputStream());
 						salida.println(tipo_operacion);//se envia al server
 						salida.println(numero_uno);
 						salida.println(numero_dos);
 						String resultado_server= entrada.readLine();//recibe la informacion del server
-						String limpio=resultado_server.substring(4);
+						
+						String limpio=resultado_server.substring(5);
+						if(limpio.equals("A")){
+							limpio="0";
+						}
+						if(limpio.equals("B")){
+							limpio="1";
+						}
+						if(limpio.equals("C")){
+							limpio="2";
+						}
+						if(limpio.equals("D")){
+							limpio="3";
+						}
+
+						if(limpio.equals("E")){
+							limpio="4";
+						}
+						if(limpio.equals("F")){
+							limpio="5";
+						}
+
+						if(limpio.equals("G")){
+							limpio="6";
+						}
+						if(limpio.equals("H")){
+							limpio="7";
+						}
+
+						if(limpio.equals("I")){
+							limpio="8";
+						}
+						if(limpio.equals("J")){
+							limpio="9";
+						}
+
 						System.out.println(limpio);
 						resultado.setText(limpio);
 					}catch(Exception e){}

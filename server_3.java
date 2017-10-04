@@ -111,9 +111,69 @@ public void iniciar(){
 		eleccion=Integer.parseInt(elec);
 		//entrada = new BufferedReader (new InputStreamReader(socket.getInputStream()));//recibe el primer parametro del cliente
 		String n1 =entrada.readLine();//almacena el texto en una variable
+		if(n1.equals("A")){
+			n1="0";
+		}
+		if(n1.equals("B")){
+			n1="1";
+		}
+		if(n1.equals("C")){
+			n1="2";
+		}
+		if(n1.equals("D")){
+			n1="3";
+		}
+		if(n1.equals("E")){
+			n1="4";
+		}
+		if(n1.equals("F")){
+			n1="5";
+		}
+		if(n1.equals("G")){
+			n1="6";
+		}
+		if(n1.equals("H")){
+			n1="7";
+		}
+		if(n1.equals("I")){
+			n1="8";
+		}
+		if(n1.equals("J")){
+			n1="9";
+		}
 		a=Integer.parseInt(n1);
 		//entrada = new BufferedReader (new InputStreamReader(socket.getInputStream()));//recibe el segundo parametro del cliente
 		String n2 = entrada.readLine();//almacena el texto en una variable
+		if(n2.equals("A")){
+			n2="0";
+		}
+		if(n2.equals("B")){
+			n2="1";
+		}
+		if(n2.equals("C")){
+			n2="2";
+		}
+		if(n2.equals("D")){
+			n2="3";
+		}
+		if(n2.equals("E")){
+			n2="4";
+		}
+		if(n2.equals("F")){
+			n2="5";
+		}
+		if(n2.equals("G")){
+			n2="6";
+		}
+		if(n2.equals("H")){
+			n2="7";
+		}
+		if(n2.equals("I")){
+			n2="8";
+		}
+		if(n2.equals("J")){
+			n2="9";
+		}
 		b=Integer.parseInt(n2);
 		//System.out.println(elec+n1+n2);
 		switch(eleccion){
@@ -130,11 +190,39 @@ public void iniciar(){
 			division(a,b);
 			break;
 		}
-		String s= String.valueOf(c); 
+		String s= String.valueOf(c);
+		if(s.equals("0")){
+			s="A";
+		}
+		if(s.equals("1")){
+			s="B";
+		}
+		if(s.equals("2")){
+			s="C";
+		}
+		if(s.equals("3")){
+			s="D";
+		}
+		if(s.equals("4")){
+			s="E";
+		}
+		if(s.equals("5")){
+			s="F";
+		}
+		if(s.equals("6")){
+			s="G";
+		}
+		if(s.equals("7")){
+			s="H";
+		}
+		if(s.equals("8")){
+			s="I";
+		}
+		if(s.equals("9")){
+			s="J";
+		}
 		salida= new DataOutputStream(socket.getOutputStream());
 		salida.writeUTF(s);
-		//System.out.println(s);
-		//salida.writeUTF("Servidor Terminado");
 		socket.close();//termina la conexion
 		
 		}catch(Exception e){};
